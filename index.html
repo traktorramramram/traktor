@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gizli Alan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="login">
+      <h2>Giriş</h2>
+      <input type="password" id="passcode" placeholder="Şifreyi gir..." />
+      <p class="hint">şifre: doğum günün, sevgili olduğumuz gün, doğum günüm. gün ay şeklinde</p>
+      <button onclick="checkPasscode()">Giriş</button>
+      <p id="error"></p>
+    </div>
+
+    <div id="mainContent" class="hidden">
+      <div class="scroll-box">
+        <p>
+          Hayatımda yazdığım en zor şeylerden biri, belki de en zoru.<br><br>
+          İlk olarak sondan konuşayım, hayır seni sevmeyi bırakmadım, hayır seni özlemeyi bırakmadım ve hayır senin hakkında kötü bir şey düşünmüyorum.<br><br>
+          Birkaç gündür bunun hazırlığını yapıyorum psikolojimi düzeltmek olsun, fikirlerimi toparlamak olsun, hayatım boyunca hep rasyonel bir insan oldum, hiçbir zaman hayalperest olmadım, bazen çok realist olup belki de ötesini düşünmediğim için kaybettğim şeyler olmuştur ama hiç pişmanlık yaşamadım.<br><br>
+          Muhtemelen bunu okuduğunda 1. ay tamamlanmış olacak, ilk 3 hafta konuyu anlayamadım, ne yapabileceğimi bulamadım, her saniye ne yapmam gerektiğini bulmaya çalıştım fakat hiçbir şey olmadı.<br><br>
+          Son konuşmamızdan sonra bir şeyler oldu, ailemle alakalı şeyler de yaşadım ve hayatım darmadağın oldu, gerçekten 2 gün içerisinde en dibi gördüm, 2 seçeneğim vardı, ya o halde kalıp sızlanmaya devam edecektim ya da bir şekilde kalkmanın bir yolunu bulacaktım canım yansa bile.<br><br>
+          Ailemle alakalı olan konularda 2. dediğimi yaptım, bir yol gördüm ve canım yanar mı yanmaz mı sonunda düşünmeden o yola girdim, belki ilk yol beynimde bir risk içermediği için daha fazla bir ruhsal huzura sahip olacaktım ama asla iyi olmayacaktım, ben de huzurumu bir kenara bırakıp adımımı attım.<br><br>
+          Şimdi ise sana geldi sıra, hayatımdaki en büyük sınava, adımı atmaktan en korktuğum yere. Yine de 2. yolu seçiyorum, artık sızlanmayacağım, sana çok net bir yol sunuyorum.<br><br>
+          Bugüne kadar hep aramızdaki sevgiye değer verdim, rahatsız olduğum konularda sana gelip bir şeyleri konuşarak halletmeyi, seni bir şeye zorlamamayı tercih ettim hep. Senden her ilişkimizin için şans istemeye geldiğimi düşündüğünde, ben zaten içimde ilişkimize şans verdiğim için sen bir şeylere karar verebilecek noktada bulundun.<br><br>
+          Bugün ise bu son, tercih tamamen senin: ya kalırsın bir şeyleri düzeltmeye çalışırsın ve ben bunu görür yine sana yardımcı olmak için bütün gücümle çabalarım ya da gitmeyi seçersin.<br><br>
+          Eğer şu an kalmayı tercih edersen benim için 2. yolun acısız olanı yaşanır ama diyelim ki gitmeyi seçtin, acısa da artık kalkacağım ve iyi olacağım, iyi olduğumda acılarımdan ders çıkartmış ve hangi acının neden ve nasıl yaşandığını hiç unutmamış olacağım.<br><br>
+          Kendinde yük hissetmen gereken bir şey yok, içinden “kalıp ben düzeleceğim, bir şeyleri düzelteceğim” diyorsan kapım son kez sana açık.<br><br>
+          Gitmek istiyorsan da güle güle.<br><br>
+          <strong>Aşağıdaki iki butondan birine bas, devamını oku.</strong>
+        </p>
+      </div>
+      <div id="buttonGroup">
+        <button onclick="stay()">Kal</button>
+        <button onclick="leave()">Git</button>
+      </div>
+    </div>
+
+    <div id="stayContent" class="hidden">
+      <div class="scroll-box">
+        <p>
+          Engeli kaldır ve sana yazmamı bekle, dinlen, kafanı boşalt, gerektiğinde sana yazacağım.
+          <strong>Ben yazmadan yazma. Seni Seviyorum.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div id="leaveContent" class="hidden">
+      <div class="scroll-box">
+        <p>
+          Demek ki gitmeyi seçtin. Yolun açık olsun, benden okuyacağın, duyacağın, göreceğin son şeyler bunlar.<br><br>
+          Öncelikle senin için her şeyin hayırlısını diliyorum. Sana aşkı, sevgiyi vb. şeyleri öğrettiğimi söylerdin, umarım ileride işine yararlar. Koşulsuz sevdik belki de cidden birbirimizi bilmiyorum, kendi tarafımdan eminim bunun olduğuna, fakat sana yetmedi demek ki.<br><br>
+          Bu satırları yazarken bile hâlâ içimde seni kaybetmiş olmanın boşluğu var.<br><br>
+          Artık hiçbir şey yapmayacağım, birini sevmeye, yanında tutmaya zorlayamazsın. Bunu bilmeme rağmen yeterince zorladım, çok kez yapmayacağımı sana söylediğim şeyleri yaptım. Bir kere ayrılalım dersen biter demiştim, kaç kere tuttum seni.<br><br>
+          Sana emek verdim. Sen yoruldun.<br><br>
+          Hiçbir pişmanlığım ve vicdan azabımın olmamasının rahatlığını yaşıyorum, sana ne sevgide eksik oldum, ne saygıda ne de başka bir şeyde. Sana sevginin en safını da verdim, huzurun en rahatını da verdim, güvenin en sağlamını da. Demek ki aradığın şeyler bunlar değilmiş.<br><br>
+          Yanlış yapmış olduğum şeyler belki vardır pek tabii hatasız olamam, ama hiçbir zaman yaptığım şeylerin karşılığı bana yaptıkların olmamalıydı. Son kez çiğnedim kendimi ve sana son bir şans daha verdim, yine kabul etmedin. Artık benim yapabileceğim bir şey yok.<br><br>
+          Sevene cehennem olur cennet, sevmeyene cennet olur cehennem.<br><br>
+          Sana bir sürü şey kattığımı biliyorum, sana çok iyi bir sevgili olduğumu da biliyorum, sana çok iyi bir arkadaş olduğumu da biliyorum. Sen benim iyiliklerimi istemedin, ben kötü biri olmadım; sen sadece beni kabul etmedin sonunda.<br><br>
+          Seni her şeyden çok seviyorum diyip, seninle mutlu ve huzurlu bir geleceğimiz olacak dediğinde kulaklarıma inanamayıp sordum birlikte mi diye; evet dedin, sadece şimdi değil dedin ve ben o gün beklemeyi kabul ettim. Tabii 3 dakika sonrasında her şeyi tepetaklak ettin.<br><br>
+          Bunun üstüne üzgünken geldin, yanında oldum, sabah yine engelledin. Kullanıp attın :). Eğer kalmayı seçmiş olsaydın da bunları konuşacaktım seninle, artık bir açıklamaya ihtiyacım yok. Göreceğim bütün zararı gördüm. Düşebileceğim en dibe düştüm.<br><br>
+          Bütün sözlerinden sonra, sevginden sonra, hayallerinden sonra hayatımda kalacağına inanmıştım. Yanılmışım. Kendine bir iyilik yap ve ileride pişman olup dönmeye çalıştığında kendini durdur, çünkü ne olursa olsun bir daha seni kabul etmeyeceğim.<br><br>
+          Ve senin gelip benim “hayır” dediğim zaman üzülmeni istemiyorum. Aksine, her ne yaşarsam yaşayayım seni kendimin önüne koymaya devam edeceğim. Fakat artık yanımda olmayacaksın. İstesen de olamayacaksın.<br><br>
+          Bu satırları okuduktan sonra pişman ol, olma. Bana salak de yine her zamanki gibi. Bir gün düzgünce düşündüğünde çok şey kaybettiğini göreceksin. Ve ben bunun için çok üzülüyorum. Keşke biraz daha çabalama isteğim, gücüm olsaydı da seni bu yola sokmamak için uğraşsaydım.<br><br>
+          Ama demin de dediğim gibi, istemeyen birine kendimi zorla sevdiremem, zorla yanımda tutamam.<br><br>
+          Sana öğrettiğim, gösterdiğim her şey için; yüzünü güldürdüğüm her an için; mutsuz olduğunda kalkman için güç olduğum için kendimle gurur duyuyorum.<br><br>
+          Hiçbir zaman karşılık beklemedim. Aslında bekledim: Mutlu olmanı.<br><br>
+          Hep “Ben seni hak edecek ne yaptım?” diye düşünürdün ama bu düşünce seni gerçeklikten uzaklaştırdı. Konu beni hak edecek ne yaptığın değil. Benim yaptıklarım senin bana yapacaklarını hak ettirecek şeyler mi, bunu düşünmeliydin.<br><br>
+          Cevabını şu an biliyor olmak beni üzüyor ve yaralıyor. Maalesef ki bu konuda başarılı olamadın Sıla. Her konuda başarılı olmanı istediğim gibi, günün sonunda yegâne istediğim şey, yanımda kalmayı becerebilmendi.<br><br>
+          Çünkü biliyordum ki –ya da şöyle söyleyeyim, senin söylediklerin doğrultusunda düşünüyordum ki– hayatında en önem verdiğin ve istediğin şey benimle olmak. Ben ise bunu karşılıksız bırakmamak için seni her türlü mutlu etmeyi amaçlıyordum.<br><br>
+          Beni çok kez kırdın son seferde. Kullanır gibi davrandığın anların oldu. Hakaret ettiğin anlar oldu. Sözde kendin çok olgun davranıyormuşsun gibi hareketlerime yaptığın yorumlar oldu.<br><br>
+          Sana net bir şey söyleyebilirim: Büyümen lazım. Bir şeyleri çok biliyormuş gibi davranmayı bırakman lazım. Ve son olarak, sözde yaşanmasını istemediğin şeyleri yaşamamak için emek vermen lazım.<br><br>
+          Şu an anlam verebiliyor musun Tolga dersen, cevabım hayır olacak.<br><br>
+          Sözde sevdiğin, senin mutluluğun ve huzurun için uğraşan ve bir sürü hayal kurduğun adamı terk ettin. Onlarca şans vermesine rağmen her seferinde gitmeyi seçtin.<br><br>
+          Sana yaptığım her şey için hiç pişman değilim. Eğer sende hakkım varsa helal olsun. Sen de bana hakkını helal et.<br><br>
+          Aklın seni kandırsa da, kalbin seni bana getirecek. Ama ben orada olmayacağım.<br><br>
+          Bunlar belki senin için döktüğüm son göz yaşları olmayacak ama senin haberinin olduğu son olacaklar. Allah’a emanet ol. An itibariyle senin için bir açılmamak üzere Tolga defteri kapandı.<br><br>
+          Son zamanlarda çok söylemiştim, yine söyleyeceğim: Seni <strong>SANA RAĞMEN</strong> her şeyden çok sevdim. Sevgim bitmeyecek, özlemim dinmeyecek, üzüntüm hep içimde olacak… ama artık onlar beni geri çekmeyecek. Daha güçlü bir insan olmam için kullanacağım yükler olacaklar.<br><br>
+          Bu mektubu okuduktan sonra eğer bir gün birinin gözlerine baktığında içinden "acaba o bana senin baktığın gibi bakıyor mu" dersen bil ki o an beni hatırlıyor olacaksın ve o anlık hatırlayış sana çok şey anlatacak: kimi neden kaybettiğini. <br><br>
+          Birkaç günde yazdım bunları, inişlerle, çıkışlarla, sinirle, üzüntüyle, bazen de hâlâ olabileceğimizin hayaliyle. Kendimle çok gurur duyuyorum Sıla, birkaç küçük hata yapmış olsam da ben olabileceğimden daha iyi biri oldum hep. Kendini kötü hissedeceğini düşünmüyorum, çünkü bu yolu sen seçtin, yine de eğer dediğim bir şey veyahut bu yol seni üzüyorsa özür dilerim. Bunların hiçbiri olmaması için çok uğraştım, milyarda birim kadar sen uğraşmış olsaydın çoktan bugünleri atlatmıştık. Her neyse, anlatmak konuşmak istediğim bir sürü şey var ama anlatacak kimsem yok. Benim her şeyimdin, gitmenle birlikte hiçbir şeyim kalmadı. İlkin ve sonsuzun olmayı çok sevmiştim, duyduğum en güzel şeylerdendi, belki evet ilkin olabildim ama sonsuzun olamadım. Allah'a emanet ol güzelim.<br><br>
+          Kendine iyi bak güzel sevgilim. Sevgim baki, ama yollarımız sonsuza dek ayrıldı. Elveda. <strong> Seni Her Şeyden Çok Çok Çok Seviyorum :')</strong>
+        </p>
+      </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
