@@ -11,7 +11,7 @@ const correctPasscode = "sıla";
    // setBackground("bg-main.jpg");
   //}
 //});
-
+setBackground("bg-main.jpg");
 function setBackground(imageFile) {
   document.body.style.backgroundImage = `url('img/${imageFile}')`;
 }
@@ -22,14 +22,14 @@ function checkPasscode() {
     document.getElementById("login").classList.add("hidden");
     notifyServer("Sıla Sayfaya girdi.");
 
-    const choice = localStorage.getItem("choice");
-    if (choice === "git") {
-      document.getElementById("leaveContent").classList.remove("hidden");
-      setBackground("bg-leave.jpg");
-    } else {
-      document.getElementById("mainContent").classList.remove("hidden");
-      setBackground("bg-main.jpg");
-    }
+    //const choice = localStorage.getItem("choice");
+    //if (choice === "git") {
+    //  document.getElementById("leaveContent").classList.remove("hidden");
+    //  setBackground("bg-leave.jpg");
+   // } else {
+    //  document.getElementById("mainContent").classList.remove("hidden");
+   //   setBackground("bg-main.jpg");
+    //}
   } else {
     document.getElementById("error").innerText = "Şifre yanlış.";
     notifyServer("Şifreyi girmeyi bile beceremedi");
