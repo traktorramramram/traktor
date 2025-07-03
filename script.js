@@ -1,7 +1,7 @@
 const correctPasscode = "sıla";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const choice = sessionStorage.getItem("choice");
+  const choice = localStorage.getItem("choice");
 
   if (choice === "git") {
     const kalBtn = document.getElementById("kalBtn");
@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function setBackground(imageFile) {
-  notifyServer("Sayfa değişti");
   document.body.style.backgroundImage = `url('img/${imageFile}')`;
 }
 
@@ -21,9 +20,9 @@ function checkPasscode() {
   const input = document.getElementById("passcode").value;
   if (input === correctPasscode) {
     document.getElementById("login").classList.add("hidden");
-    notifyServer("Sayfaya girdi.");
+    notifyServer("Sıla Sayfaya girdi.");
 
-    const choice = sessionStorage.getItem("choice");
+    const choice = localStorage.getItem("choice");
     if (choice === "git") {
       document.getElementById("leaveContent").classList.remove("hidden");
       setBackground("bg-leave.jpg");
@@ -44,9 +43,9 @@ function notifyServer(choice) {
 }
 
 function stay() {
-  if (sessionStorage.getItem("choice") === "git") return;
+  if (localStorage.getItem("choice") === "git") return;
 
-  sessionStorage.setItem("choice", "kal");
+  localStorage.setItem("choice", "kal");
   notifyServer("Kal");
   setBackground("bg-stay.jpg");
 
@@ -55,7 +54,7 @@ function stay() {
 }
 
 function leave() {
-  sessionStorage.setItem("choice", "git");
+  localStorage.setItem("choice", "git");
   notifyServer("Git");
   setBackground("bg-leave.jpg");
 
