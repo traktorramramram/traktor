@@ -1,20 +1,15 @@
-const correctPasscode = "sıla";
-notifyServer("Sayfaya girdi.");
-//document.addEventListener("DOMContentLoaded", () => {
-//  const choice = localStorage.getItem("choice");
+correctPasscode = "sıla";
+document.addEventListener("DOMContentLoaded", () => {
+  const choice = sessionStorage.getItem("choice");
 
-/*  if (choice === "git") {
+  if (choice === "git") {
     const kalBtn = document.getElementById("kalBtn");
     if (kalBtn) kalBtn.style.display = "none";
     setBackground("bg-leave.jpg");
   } else {
     setBackground("bg-main.jpg");
-  }*/
-//});
-
-function setBackground(imageFile) {
-  document.body.style.backgroundImage = `url('img/${imageFile}')`;
-}
+  }
+});
 
 function checkPasscode() {
   const input = document.getElementById("passcode").value;
@@ -22,7 +17,7 @@ function checkPasscode() {
     document.getElementById("login").classList.add("hidden");
     notifyServer("Sıla");
 
-    //const choice = localStorage.getItem("choice");
+    const choice = sessionStorage.getItem("choice");
     if (choice === "git") {
       document.getElementById("leaveContent").classList.remove("hidden");
       setBackground("bg-leave.jpg");
@@ -36,16 +31,10 @@ function checkPasscode() {
   }
 }
 
-function notifyServer(choice) {
-  fetch("https://script.google.com/macros/s/AKfycbzIM5RfHQcxkFXREco8G5jp6q4WfRnXsk4p1r8a_GCiOXnPp0vso8qY4IPDjnu9DVTt/exec?choice=" + choice, {
-    method: "POST"
-  });
-}
-
 function stay() {
-  //if (localStorage.getItem("choice") === "git") return;
+  if (sessionStorage.getItem("choice") === "git") return;
 
-  //localStorage.setItem("choice", "kal");
+  sessionStorage.setItem("choice", "kal");
   notifyServer("Kal");
   setBackground("bg-stay.jpg");
 
@@ -54,7 +43,7 @@ function stay() {
 }
 
 function leave() {
-  //localStorage.setItem("choice", "git");
+  sessionStorage.setItem("choice", "git");
   notifyServer("Git");
   setBackground("bg-leave.jpg");
 
