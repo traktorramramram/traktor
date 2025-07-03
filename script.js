@@ -1,19 +1,18 @@
-const correctPasscode = "131125012507";
+const correctPasscode = "sıla";
+notifyServer("Sayfaya girdi.");
+//document.addEventListener("DOMContentLoaded", () => {
+//  const choice = localStorage.getItem("choice");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const choice = localStorage.getItem("choice");
-
-  if (choice === "git") {
+/*  if (choice === "git") {
     const kalBtn = document.getElementById("kalBtn");
     if (kalBtn) kalBtn.style.display = "none";
     setBackground("bg-leave.jpg");
   } else {
     setBackground("bg-main.jpg");
-  }
-});
+  }*/
+//});
 
 function setBackground(imageFile) {
-  notifyServer("Sayfa değişti");
   document.body.style.backgroundImage = `url('img/${imageFile}')`;
 }
 
@@ -21,7 +20,7 @@ function checkPasscode() {
   const input = document.getElementById("passcode").value;
   if (input === correctPasscode) {
     document.getElementById("login").classList.add("hidden");
-    notifyServer("Sayfaya girdi.");
+    notifyServer("Sıla");
 
     const choice = localStorage.getItem("choice");
     if (choice === "git") {
@@ -44,7 +43,7 @@ function notifyServer(choice) {
 }
 
 function stay() {
-  if (localStorage.getItem("choice") === "git") return;
+  //if (localStorage.getItem("choice") === "git") return;
 
   localStorage.setItem("choice", "kal");
   notifyServer("Kal");
