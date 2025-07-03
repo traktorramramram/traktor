@@ -1,16 +1,16 @@
 const correctPasscode = "sıla";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const choice = localStorage.getItem("choice");
+//document.addEventListener("DOMContentLoaded", () => {
+  //const choice = localStorage.getItem("choice");
 
-  if (choice === "git") {
-    const kalBtn = document.getElementById("kalBtn");
-    if (kalBtn) kalBtn.style.display = "none";
-    setBackground("bg-leave.jpg");
-  } else {
-    setBackground("bg-main.jpg");
-  }
-});
+  //if (choice === "git") {
+   // const kalBtn = document.getElementById("kalBtn");
+  //  if (kalBtn) kalBtn.style.display = "none";
+  //  setBackground("bg-leave.jpg");
+  //} else {
+   // setBackground("bg-main.jpg");
+  //}
+//});
 
 function setBackground(imageFile) {
   document.body.style.backgroundImage = `url('img/${imageFile}')`;
@@ -43,9 +43,9 @@ function notifyServer(choice) {
 }
 
 function stay() {
-  if (localStorage.getItem("choice") === "git") return;
+  //if (localStorage.getItem("choice") === "git") return;
 
-  localStorage.setItem("choice", "kal");
+  //localStorage.setItem("choice", "kal");
   notifyServer("Kal");
   setBackground("bg-stay.jpg");
 
@@ -54,7 +54,7 @@ function stay() {
 }
 
 function leave() {
-  localStorage.setItem("choice", "git");
+  //localStorage.setItem("choice", "git");
   notifyServer("Git");
   setBackground("bg-leave.jpg");
 
