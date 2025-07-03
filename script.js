@@ -1,8 +1,8 @@
 const correctPasscode = "sıla";
 
-//document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   //const choice = localStorage.getItem("choice");
-
+  setBackground("bg-main.jpg");
   //if (choice === "git") {
    // const kalBtn = document.getElementById("kalBtn");
   //  if (kalBtn) kalBtn.style.display = "none";
@@ -10,8 +10,8 @@ const correctPasscode = "sıla";
   //} else {
    // setBackground("bg-main.jpg");
   //}
-//});
-setBackground("bg-main.jpg");
+});
+
 function setBackground(imageFile) {
   document.body.style.backgroundImage = `url('img/${imageFile}')`;
 }
