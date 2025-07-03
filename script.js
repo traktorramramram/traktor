@@ -22,7 +22,7 @@ function checkPasscode() {
     document.getElementById("login").classList.add("hidden");
     notifyServer("Sıla");
 
-    const choice = localStorage.getItem("choice");
+    //const choice = localStorage.getItem("choice");
     if (choice === "git") {
       document.getElementById("leaveContent").classList.remove("hidden");
       setBackground("bg-leave.jpg");
@@ -45,7 +45,7 @@ function notifyServer(choice) {
 function stay() {
   //if (localStorage.getItem("choice") === "git") return;
 
-  localStorage.setItem("choice", "kal");
+  //localStorage.setItem("choice", "kal");
   notifyServer("Kal");
   setBackground("bg-stay.jpg");
 
@@ -54,7 +54,7 @@ function stay() {
 }
 
 function leave() {
-  localStorage.setItem("choice", "git");
+  //localStorage.setItem("choice", "git");
   notifyServer("Git");
   setBackground("bg-leave.jpg");
 
